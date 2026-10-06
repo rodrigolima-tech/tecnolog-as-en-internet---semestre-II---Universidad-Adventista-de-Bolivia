@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LA TIENDA DEL LOCO RODRIGO</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LA TIENDA DEL LOCO RODRIGO</title>
+ 
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>LA TIENDA DEL LOCO RODRIGO</h1> 
-        <img src="logo.png" alt="Foto de la tienda de rodrigo">
-        <nav>
-            <ul><a href="#">Inicio</a></ul>
-            <ul><a href="#">Productos</a></ul>
-            <ul><a href="#">Contacto</a></ul>
-        </nav>
-    </header>
+  <header>
+    <p class="marca">LA TIENDA DEL LOCO RODRIGO</p>
+    <img src="logo.png" alt="Logo de la tienda de Rodrigo">
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-              <strong>Estos son mi productos</strong>
-        <p>Consulta siempre los productos disponibles</p>
-        <img src="celular.png" alt="Foto de un celular">
-         </section>
-    </main>
+  <main>
+    <section id="inicio" class="tarjeta">
+      <h1>Tu tienda de confianza</h1>
+      <p>Consulta siempre los productos disponibles.</p>
+      <img src="celular.png" alt="Foto de un celular">
+    </section>
 
-    <footer>
-        <p>© 2026 Mi Primera Página - Hecha con para la materia tecnologias de internet <br>
-        Estudiante: Rodrigo Wilder Lima Canaviri<br>
-        rodrigo.lima@uab.edu.bo<br>
+    <section id="productos" class="tarjeta">
+      <h2>Estos son mis productos</h2>
+      <ul>
+        <li>Celulares de todas las marcas</li>
+        <li>Accesorios: cargadores, audífonos y fundas</li>
+        <li>Equipos nuevos y usados con garantía</li>
+        <li>Recargas y servicios técnicos</li>
+      </ul>
+    </section>
 
-        </p>
-    </footer>
+    <section id="contacto" class="tarjeta">
+      <h2>Contáctame</h2>
+      <form>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="700 00000">
+
+        <label for="asunto">Asunto</label>
+        <select id="asunto" name="asunto">
+          <option value="pedido">Quiero hacer un pedido</option>
+          <option value="consulta">Consultar un producto</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Mi Primera Página - Hecha para la materia Tecnologías de Internet</p>
+    <p>Estudiante: Rodrigo Wilder Lima Canaviri · rodrigo.lima@uab.edu.bo</p>
+  </footer>
 </body>
 </html>
