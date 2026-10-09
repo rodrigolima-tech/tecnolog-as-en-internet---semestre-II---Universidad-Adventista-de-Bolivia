@@ -170,7 +170,7 @@ body.modo-oscuro nav a {
   }
 
   nav ul {
-    display: none;    /
+    display: none;    
     flex-direction: column;
     gap: 8px;
   }
