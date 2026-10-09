@@ -1,72 +1,186 @@
-body{
-  background: linear-gradient(to bottom,rgb(74, 73, 73), rgb(21, 21, 21));
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: monospace;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f6f3ee;
+  color: #2e2a24;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.imagenxd {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  background-color: #1f6f43;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.marca {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background-color: #17804e;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  border: 1px solid #e4dccf;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  color: #1f6f43;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.productos li {
+  flex: 1 1 150px;
+  background-color: #faf7f0;
+  border: 1px solid #e4dccf;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #c9bfae;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+button {
+  margin-top: 16px;
+  background-color: #e8a33d;
+  color: #2e2a24;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #2e2a24;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px;
+}
+
+
+#modo-oscuro {
+  background-color: #2e2a24;
+  color: #ffffff;
+}
+
+
+body.modo-oscuro {
+  background-color: #1a1a1a;
+  color: #eeeeee;
+}
+
+body.modo-oscuro .tarjeta {
+  background-color: #2b2b2b;
+  border-color: #444444;
+}
+
+body.modo-oscuro h1,
+body.modo-oscuro h2 {
+  color: #7ddba8;
+}
+
+body.modo-oscuro .productos li {
+  background-color: #333333;
+  border-color: #444444;
+}
+
+body.modo-oscuro input,
+body.modo-oscuro select,
+body.modo-oscuro textarea {
+  background-color: #3a3a3a;
+  color: #eeeeee;
+  border-color: #555555;
+}
+
+body.modo-oscuro nav a {
+  background-color: #123524;
+}
+
+
+#hamburguesa {
+  display: none;
+  background-color: #1cca81;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 6px 14px;
+  margin: 0 auto 10px;
+}
+
+@media (max-width: 600px) {
+  #hamburguesa {
+    display: block;   
   }
-  
-  input, textarea, select{
-      background-color: transparent;
-      width: 100%;
-  padding: 6px 12px;
-      box-sizing:border-box;
-      border: 1px solid rgb(85, 250, 96);
-      border-left: 6px solid rgb(163, 27, 27);
-      border-radius: 10px;
-      color:rgb(254, 255, 209);
-      font-family:inherit;
-  
-  } 
-  
-  form{
-      background-color: transparent;
-      padding: 20px 0px;
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0px 0px 25px rgb(255, 255, 255);
-      margin-top:20px;
+
+  nav ul {
+    display: none;    /
+    flex-direction: column;
+    gap: 8px;
   }
-  
-  .caja1{
-      padding: 10px 20px;
-      color: rgb(255, 255, 255);
-  
+
+
+  nav ul.nav-abierto {
+    display: flex;
   }
-  
-  .titulosxd{
-      text-align:center;
-      color: rgb(255, 255, 255);
-  
+
+  .productos {
+    flex-direction: column;
   }
-  
-  .textareaxd{
-      min-width: 100%;
-      resize: none;
-      /*min-height: 100px;*/
-  
-  
-  }
-  
-  label{
-      line-height: 2;
-  }
-  
-  .acepto{
-      width: auto;
-  }
-  
-  option{
-      background-color: black;
-  }
-  
-  fieldset{
-      border: 3px solid rgb(255, 255, 255);
-      border-radius: 10px;
-      margin: 25px;
-      padding: 0 20px 20px 20px;
-  }
-  
-  legend{
-      padding: 0 6px;
-      color: rgb(180, 179, 179)
-  }
+}
