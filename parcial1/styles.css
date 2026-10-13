@@ -50,3 +50,39 @@ body {
     padding-bottom: 6px;
   }
 
+  form label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 4px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0e7490;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font: inherit;
+  }
+  
+  form button,
+  #btn-confirmar {
+    margin-top: 14px;
+    background-color: #f59e0b;
+    color: #164e63;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 22px;
+    font: inherit;
+    font-weight: bold;
+  }
+
+  #mensaje {
+    margin-top: 14px;
+    color: #0e7490;
+    border: 2px solid #f59e0b;
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+  
