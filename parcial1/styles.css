@@ -86,3 +86,38 @@ body {
     padding: 10px 14px;
   }
   
+  footer {
+    background-color: #0e7490;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    margin-top: 10px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+
+  .oculto {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      display: block;
+    }
+  
+    nav a {
+      display: block;
+      padding: 6px 0;
+    }
+  
+    main {
+      padding: 14px 12px;
+    }
+  
+    .tarjeta {
+      padding: 14px 16px;
+    }
+  }
+  
