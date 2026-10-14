@@ -39,7 +39,7 @@
 
     <section id="contacto" class="tarjeta">
       <h2>Contáctame</h2>
-      <form>
+      <form id="form-contacto" novalidate>
         <label for="nombre">Nombre completo</label>
         <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
 
@@ -57,17 +57,17 @@
         </select>
 
         <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>
 
         <button type="submit">Enviar</button>
+        <p id="aviso-contacto" class="aviso"></p>
       </form>
     </section>
   </main>
   <footer>
-    <p>© 2026 Mi Primera Página - Hecha para la materia Tecnologías de Internet</p>
+    <p>&copy; 2026 LA TIENDA DEL LOCO RODRIGO - Hecha para la materia Tecnolog&iacute;as de Internet</p>
     <p>Estudiante: Rodrigo Wilder Lima Canaviri - rodrigo.lima@uab.edu.bo</p>
   </footer>
   <script src="script.js"></script>
 </body>
 </html>
-

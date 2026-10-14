@@ -184,3 +184,39 @@ body.modo-oscuro nav a {
     flex-direction: column;
   }
 }
+
+
+.aviso {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.aviso:empty {
+  display: none;
+}
+
+.aviso.error {
+  background-color: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f5c6c0;
+}
+
+.aviso.exito {
+  background-color: #e6f4ea;
+  color: #1f6f43;
+  border: 1px solid #b7dfc4;
+}
+
+body.modo-oscuro .aviso.error {
+  background-color: #3a2222;
+  color: #f2a6a0;
+  border-color: #5c3a3a;
+}
+
+body.modo-oscuro .aviso.exito {
+  background-color: #1d3327;
+  color: #7ddba8;
+  border-color: #2f4a3a;
+}
