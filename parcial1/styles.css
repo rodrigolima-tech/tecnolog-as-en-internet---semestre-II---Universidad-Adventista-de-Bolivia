@@ -1,222 +1,131 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f6f3ee;
-  color: #2e2a24;
-  line-height: 1.5;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ecfeff;
+  color: #164e63;
+  line-height: 1.6;
 }
 
-.imagenxd {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-}
 
 header {
-  width: 100%;
-  background-color: #1f6f43;
+  background-color: #0e7490;
   color: #ffffff;
-  padding: 20px;
   text-align: center;
+  padding: 28px 16px 22px;
 }
 
-.marca {
-  font-size: 28px;
-  font-weight: bold;
-  margin: 0 0 10px 0;
+header h1 {
+  margin: 0 0 14px;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+nav {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 28px;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  display: block;
-  padding: 8px 14px;
-  border-radius: 6px;
-  background-color: #17804e;
 }
+
 
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 16px;
 }
 
 .tarjeta {
   background-color: #ffffff;
-  border: 1px solid #e4dccf;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
+  border: 1px solid #0e7490;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 16px 0;
 }
 
-h1, h2 {
-  color: #1f6f43;
+.tarjeta h2 {
+  margin-top: 0;
+  color: #0e7490;
+  border-bottom: 3px solid #f59e0b;
+  padding-bottom: 6px;
 }
 
-.productos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 0;
-  list-style: none;
-}
-
-.productos li {
-  flex: 1 1 150px;
-  background-color: #faf7f0;
-  border: 1px solid #e4dccf;
-  border-radius: 8px;
-  padding: 12px;
-  text-align: center;
-}
-
-label {
+/* 5. Formulario */
+form label {
   display: block;
-  margin-top: 12px;
   font-weight: bold;
+  margin: 12px 0 4px;
 }
 
-input,
-select,
-textarea {
+form input,
+form textarea {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #c9bfae;
+  padding: 10px;
+  border: 1px solid #0e7490;
   border-radius: 6px;
   box-sizing: border-box;
-  font-family: inherit;
+  font: inherit;
 }
 
-button {
-  margin-top: 16px;
-  background-color: #e8a33d;
-  color: #2e2a24;
+form button,
+#btn-confirmar {
+  margin-top: 14px;
+  background-color: #f59e0b;
+  color: #164e63;
   border: none;
   border-radius: 6px;
-  padding: 10px 20px;
+  padding: 12px 22px;
+  font: inherit;
   font-weight: bold;
-  cursor: pointer;
 }
+
+
+#mensaje {
+  margin-top: 14px;
+  color: #0e7490;
+  border: 2px solid #f59e0b;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
 
 footer {
-  background-color: #2e2a24;
+  background-color: #0e7490;
   color: #ffffff;
   text-align: center;
-  padding: 16px;
+  padding: 14px 16px;
+  margin-top: 10px;
+}
+
+footer p {
+  margin: 0;
 }
 
 
-#modo-oscuro {
-  background-color: #2e2a24;
-  color: #ffffff;
-}
-
-
-body.modo-oscuro {
-  background-color: #1a1a1a;
-  color: #eeeeee;
-}
-
-body.modo-oscuro .tarjeta {
-  background-color: #2b2b2b;
-  border-color: #444444;
-}
-
-body.modo-oscuro h1,
-body.modo-oscuro h2 {
-  color: #7ddba8;
-}
-
-body.modo-oscuro .productos li {
-  background-color: #333333;
-  border-color: #444444;
-}
-
-body.modo-oscuro input,
-body.modo-oscuro select,
-body.modo-oscuro textarea {
-  background-color: #3a3a3a;
-  color: #eeeeee;
-  border-color: #555555;
-}
-
-body.modo-oscuro nav a {
-  background-color: #123524;
-}
-
-
-#hamburguesa {
+.oculto {
   display: none;
-  background-color: #1cca81;
-  color: #ffffff;
-  font-size: 24px;
-  padding: 6px 14px;
-  margin: 0 auto 10px;
 }
+
 
 @media (max-width: 600px) {
-  #hamburguesa {
-    display: block;   
+  nav {
+    display: block;
   }
 
-  nav ul {
-    display: none;    
-    flex-direction: column;
-    gap: 8px;
+  nav a {
+    display: block;
+    padding: 6px 0;
   }
 
-
-  nav ul.nav-abierto {
-    display: flex;
+  main {
+    padding: 14px 12px;
   }
 
-  .productos {
-    flex-direction: column;
+  .tarjeta {
+    padding: 14px 16px;
   }
 }
 
-
-.aviso {
-  margin-top: 12px;
-  padding: 10px 14px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.aviso:empty {
-  display: none;
-}
-
-.aviso.error {
-  background-color: #fdecea;
-  color: #b3261e;
-  border: 1px solid #f5c6c0;
-}
-
-.aviso.exito {
-  background-color: #e6f4ea;
-  color: #1f6f43;
-  border: 1px solid #b7dfc4;
-}
-
-body.modo-oscuro .aviso.error {
-  background-color: #3a2222;
-  color: #f2a6a0;
-  border-color: #5c3a3a;
-}
-
-body.modo-oscuro .aviso.exito {
-  background-color: #1d3327;
-  color: #7ddba8;
-  border-color: #2f4a3a;
-}
