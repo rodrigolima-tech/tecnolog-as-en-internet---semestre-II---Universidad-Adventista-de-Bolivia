@@ -12,3 +12,12 @@ $carta = [
     "Docena de salteñas - Bs 65",
     "Refresco de mocochinchi - Bs 5"
   ];
+echo "<h2>Nuestra carta</h2>";
+  echo "<ul>";
+  foreach ($carta as $item) {
+    echo "<li>$item</li>";
+  }
+  echo "</ul>";
+echo "<p>Te atiende RODRIGO WILDER LIMA CANAVIRI</p>";
+?>
+
