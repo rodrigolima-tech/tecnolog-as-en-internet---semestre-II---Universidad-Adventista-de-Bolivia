@@ -7,3 +7,21 @@ function revisarPedido(event) {
   const correo = document.querySelector("#correo").value;
 
   if (nombre === "" || correo === "") {
+    event.preventDefault();
+    aviso.textContent = "Sin tu nombre y tu correo no anotamos el pedido.";
+    aviso.classList.add("error");
+    aviso.classList.remove("exito");
+
+  } else if (correo.includes("@") === false) {
+     event.preventDefault();
+    aviso.textContent = "A ese correo le falta el arroba - corregilo antes de enviar.";
+    aviso.classList.add("error");
+    aviso.classList.remove("exito");
+
+  } else {
+    aviso.textContent = "Pedido tomado - te atiende RODRIGO WILDER LIMA CANAVIRI";
+    aviso.classList.add("exito");
+    aviso.classList.remove("error");
+  }
+}
+formulario.addEventListener("submit", revisarPedido);
