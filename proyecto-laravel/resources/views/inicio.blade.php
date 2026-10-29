@@ -22,6 +22,7 @@
     <nav>
       <a href="/inicio">Inicio</a>
       <a href="/contacto">Contacto</a>
+      <a href="/login">Acceso al panel del admin</a>
     </nav>
   </header>
 
@@ -30,12 +31,15 @@
       <h1>Tu tienda de confianza</h1>
       <p>Consulta siempre los productos disponibles.</p>
       <h2>Estos son mis productos</h2>
-      <ul>
-        <li>Celulares de todas las marcas</li>
-        <li>Accesorios: cargadores, audífonos y fundas</li>
-        <li>Equipos nuevos y usados con garantía</li>
-        <li>Recargas y servicios técnicos</li>
-      </ul>
+
+@forelse($productos as $producto)
+  <div class="tarjeta">
+    <strong>{{ $producto->nombre }}</strong><br>
+    Precio: {{ $producto->precio }} Bs — Stock: {{ $producto->stock }} unidades
+  </div>
+@empty
+  <p>No hay productos cargados todavía.</p>
+@endforelse
     </section>
   </main>
 
