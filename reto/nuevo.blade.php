@@ -9,6 +9,7 @@
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
+                  
                     @endforeach
                 </ul>
             </div>
@@ -22,6 +23,8 @@
             <label for="precio">Precio en Bs</label>
             <input type="number" id="precio" name="precio">
 
+            <label for="stock">Unidades en vitrina</label>
+            <input type="number" id="stock" name="stock" min="0">
             <button type="submit">Registrar torta</button>
         </form>
     </div>

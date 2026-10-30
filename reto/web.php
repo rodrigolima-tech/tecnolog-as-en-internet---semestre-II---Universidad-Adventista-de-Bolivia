@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\Producto;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Http\Controllers\ProductoController;
 use App\Models\Torta;
 Route::get('/inicio', function () {
-    return view('inicio');
+    return view('inicio', ['productos' => Producto::all()]);
 });
 
 Route::get('/contacto', function () {
@@ -49,9 +49,6 @@ Route::middleware('auth.manual')->group(function () {
 });
 
 
-
-//INGE NO BORRE LAS RUTAS DE MIS ANTERIORES PROYECTOS PORQUE SIENTO QUE SE ROMPERAN DESDE AQUI SON LAS RUTAS Y OTROS DE LA EVALUACION INTEGRADORA
-
 Route::get('/tortas', function () {
     $tortas = Torta::all();
     return view('tortas.index', compact('tortas'));
@@ -66,17 +63,22 @@ Route::post('/tortas/nuevo', function () {
         [
             'sabor' => 'required',
             'precio' => 'required|integer',
+            'stock' => 'required|integer|min:0',
         ],
         [
             'sabor.required' => 'Indica el sabor de la torta.',
             'precio.required' => 'Indica el precio de la torta.',
             'precio.integer' => 'El precio va en digitos, sin centavos.',
+            'stock.required' => 'Indica cuantas unidades hay en la vitrina.',
+            'stock.integer' => 'El stock va en numeros enteros.',
+            'stock.min' => 'El stock no puede ser negativo.',
         ]
     );
 
     Torta::create([
         'sabor' => request()->input('sabor'),
         'precio' => request()->input('precio'),
+        'stock' => request()->input('stock'),
     ]);
 
     return redirect('/tortas');
